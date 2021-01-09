@@ -15,8 +15,8 @@ function App() {
   return (
     <div id="main">
       <div data-testid="counter">{counter}</div>
-      <button onClick={incre}>increment</button>
-      <button onClick={decre}>decrement</button>
+      <button onClick={incre}>+</button>
+      <button onClick={decre}>-</button>
     </div>
   );
 }
