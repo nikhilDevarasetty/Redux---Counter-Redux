@@ -1,10 +1,6 @@
-function actions() {
-  const increment = () => {
-    return { type: "counter/incremented" };
-  };
-  const decrement = () => {
-    return { type: "counter/decremented" };
-  };
-}
-
-export default actions;
+export const increment = () => {
+  return { type: "counter/incremented" };
+};
+export const decrement = () => {
+  return { type: "counter/decremented" };
+};
