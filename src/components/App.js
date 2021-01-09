@@ -4,7 +4,7 @@ import store from "../store";
 import actions from "../actions/action";
 
 function App() {
-  const [counter, setCounter] = useState({ value: 0 });
+  const [counter, setCounter] = useState({ counter: 0 });
   const incre = () => {
     store.dispatch({ type: "counter/incremented" });
   };
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div id="main">
-      <div data-testid="counter">{counter.value}</div>
+      <div data-testid="counter">{counter.counter}</div>
       <button onClick={incre}>+</button>
       <button onClick={decre}>-</button>
     </div>
