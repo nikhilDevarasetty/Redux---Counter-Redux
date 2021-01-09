@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import { store, counterSlice } from "../store";
+// import { store, counterSlice } from "../store";
+import store from "../store";
+import actions from "../actions/action";
 
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState({ value: 0 });
   const incre = () => {
-    store.dispatch(counterSlice.actions.increment());
-    setCounter(store.getState());
+    store.dispatch({ type: "counter/incremented" });
   };
   const decre = () => {
-    store.dispatch(counterSlice.actions.decrement());
-    setCounter(store.getState());
+    store.dispatch({ type: "counter/decremented" });
   };
+
+  store.subscribe(() => setCounter(store.getState()));
 
   return (
     <div id="main">
-      <div data-testid="counter">{counter}</div>
+      <div data-testid="counter">{counter.value}</div>
       <button onClick={incre}>+</button>
       <button onClick={decre}>-</button>
     </div>
