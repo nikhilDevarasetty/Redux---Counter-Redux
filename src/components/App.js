@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div id="main">
-      <h3 data-testid="counter">Count: {store.counter}</h3>
+      <h3 data-testid="counter">{store.counter}</h3>
       <button onClick={inc}>+</button>
       <br />
       <br />
