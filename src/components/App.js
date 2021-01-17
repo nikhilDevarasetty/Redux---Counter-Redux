@@ -30,7 +30,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../actions/action";
 
 function App() {
-  const store = useSelector((store) => store);
+  const state = useSelector((store) => store);
   const dispatch = useDispatch();
 
   const inc = () => {
@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div id="main">
-      <div data-testid="counter">{store.counter}</div>
+      <div data-testid="counter">{state.counter}</div>
       <button onClick={inc}>+</button>
       <button onClick={dec}>-</button>
     </div>
