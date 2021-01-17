@@ -44,8 +44,8 @@ function App() {
   return (
     <div id="main">
       <div data-testid="counter">{state.counter}</div>
-      <button onClick={inc}>+</button>
-      <button onClick={dec}>-</button>
+      <button onClick={inc}>'+'</button>
+      <button onClick={dec}>'-'</button>
     </div>
   );
 }
